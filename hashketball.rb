@@ -87,3 +87,4 @@ end
 def most_points_scored()
   most_points = get_array_of_players.max { |a, b| a[:points] <=> b[:points] }
   return most_points[:player_name]
+end
