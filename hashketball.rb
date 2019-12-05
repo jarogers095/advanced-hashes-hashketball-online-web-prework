@@ -70,3 +70,11 @@ def player_numbers(team_name)
   
   return numbers
 end
+
+def player_stats(name)
+  get_array_of_players.each do |player|
+    if player[:player_name] == name
+      return player
+    end
+  end
+end
