@@ -12,7 +12,14 @@ def game_hash()
 end
 
 def num_points_scored(name)
+  player_holder = []
   game_hash[:home][:players].each do |player|
-    puts player[:player_name]
+    if (player[:player_name] == name)
   end
 end
+
+def get_array_of_players() 
+  player_holder = []
+  game_hash[:home][:players].each do |player|
+    player_holder.push(player)
+  end
