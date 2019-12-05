@@ -91,8 +91,12 @@ end
 
 def winning_team()
   home_total = 0
+  away_total = 0
   game_hash[:home][:players].each do |player| 
     home_total += player[:points]
+  end
+  game_hash[:away][:players].each do |player| 
+    away_total += player[:points]
   end
   
   if(home_total > away_total)
