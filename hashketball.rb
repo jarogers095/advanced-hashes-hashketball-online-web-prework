@@ -54,3 +54,18 @@ def team_names()
   teams.push(game_hash[:away][:team_name])
   return teams
 end
+
+def player_numbers(team_name)
+  numbers = []
+  if (game_hash[:home][:team_name] == team_name)
+    game_hash[:home][:players].each do |player|
+      numbers.push(player[:number])
+    end
+  elsif (game_hash[:away][:team_name] == team_name)
+    game_hash[:away][:players].each do |player|
+      numbers.push(player[:number])
+    end
+  end
+  
+  return numbers
+end
