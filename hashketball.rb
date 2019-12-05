@@ -2,10 +2,10 @@ require "yaml"
 require "pp"
 
 def load_data()
-  data = YAML.load_file("./hashketball.yml")
-  pp data
+  YAML.load_file("./hashketball.yml")
 end
 
 def game_hash()
-  load_data()
+  the_game_hash = load_data()
+  return the_game_hash
 end
