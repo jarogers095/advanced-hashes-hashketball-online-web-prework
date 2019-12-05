@@ -110,6 +110,14 @@ def player_with_longest_name
   long_player = get_array_of_players.max { |a, b| a[:player_name].length <=> b[:player_name].length }
   return long_player[:player_name]
 end
+
+def long_name_steals_a_ton
+  long_player = get_array_of_players.max { |a, b| a[:player_name].length <=> b[:player_name].length }
+  stealer = get_array_of_players.max { |a, b| a[:steals] <=> b[:steals] }
   
-  
-  
+  if (long_player[:player_name] == stealer[:player_name])
+    return true
+  else
+    return FALSE
+  end
+end
