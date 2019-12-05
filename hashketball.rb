@@ -7,6 +7,5 @@ end
 
 def game_hash()
   the_game_hash = load_data()
-  pp the_game_hash
   return the_game_hash
 end
