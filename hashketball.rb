@@ -1,5 +1,6 @@
 require "yaml"
 require "pp"
 
-def load_data(path)
-  data = YAML.load_file(path)
+def load_data()
+  data = YAML.load_file("./hashketball.yml")
+  
