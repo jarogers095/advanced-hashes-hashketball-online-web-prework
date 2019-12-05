@@ -11,14 +11,6 @@ def game_hash()
   return the_game_hash
 end
 
-def num_points_scored(name)
-  get_array_of_players.each do |player|
-    if player[:player_name] == name
-      return player[:points]
-    end
-  end
-end
-
 def get_array_of_players() 
   player_holder = []
   
@@ -30,4 +22,20 @@ def get_array_of_players()
   end
   
   return player_holder
+end
+
+def num_points_scored(name)
+  get_array_of_players.each do |player|
+    if player[:player_name] == name
+      return player[:points]
+    end
+  end
+end
+
+def shoe_size(name) 
+  get_array_of_players.each do |player|
+    if player[:player_name] == name
+      return player[:shoe]
+    end
+  end
 end
