@@ -75,6 +75,8 @@ def player_stats(name)
   get_array_of_players.each do |player|
     if player[:player_name] == name
       return {
+        player[:],
+        player[:],
         player[:]
       }
     end
