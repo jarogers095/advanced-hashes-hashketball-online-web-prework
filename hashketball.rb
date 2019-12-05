@@ -80,5 +80,6 @@ def player_stats(name)
 end
 
 def big_shoe_rebounds()
-  puts get_array_of_players.max { |a, b| a[:shoe] <=> b[:shoe] }
+  big_shoe_player = get_array_of_players.max { |a, b| a[:shoe] <=> b[:shoe] }
+  return big_shoe_player[:rebounds]
 end
