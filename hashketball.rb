@@ -106,7 +106,10 @@ def winning_team()
   end
 end
   
-  
+def player_with_longest_name
+  player = get_array_of_players.max { |a, b| a[:shoe] <=> b[:shoe] }
+  return big_shoe_player[:rebounds]
+end
   
   
   
