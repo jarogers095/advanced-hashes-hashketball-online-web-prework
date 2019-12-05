@@ -74,7 +74,7 @@ end
 def player_stats(name)
   get_array_of_players.each do |player|
     if player[:player_name] == name
-      return player.slice()
+      return player.slice(:number, :shoe, :points, :rebounds, :assists, :steals, :blocks, :slam_dunks)
     end
   end
 end
