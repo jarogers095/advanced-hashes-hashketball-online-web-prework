@@ -90,9 +90,15 @@ def most_points_scored()
 end
 
 def winning_team()
-  home_total = game_hash[:home][:players].reduce {|n| n[:points]
+  home_total = game_hash[:home][:players].reduce {|sum, n| sum + n[:points]}
+  away_total = game_hash[:away][:players].reduce {|sum, n| sum + n[:points]}
   
-  
+  if(home_total > away_total)
+    return game_hash[:home][:team_name]
+  else
+    return game_hash[:away][:team_name]
+  end
+end
   
   
   
