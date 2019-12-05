@@ -80,4 +80,4 @@ def player_stats(name)
 end
 
 def big_shoe_rebounds()
-  puts get_array_of_players.max
+  puts get_array_of_players.max {
